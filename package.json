@@ -1,0 +1,24 @@
+{
+  "name": "fileupload",
+  "version": "1.0.0",
+  "description": "file uploading project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aravind934/fileUpload.git"
+  },
+  "author": "Author",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aravind934/fileUpload/issues"
+  },
+  "homepage": "https://github.com/Aravind934/fileUpload#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "multer": "^1.4.2"
+  }
+}
