@@ -1,7 +1,14 @@
-<div class="card-body border">
-  <h5 class="card-title">Select file to upload</h5>
-  <p class="card-text">1.File must be a Image <br>
-                       2.File must be with in 1 mb
-  </p>
-  <a href="#" class="btn btn-primary">Upload</a>
-</div>
+<div *ngIf="result" [ngClass]="result.success ? 'alert alert-success' : 'alert alert-danger' " role="alert">
+    {{result.msg}}
+  </div>
+<form  method="post" enctype="multipart/form-data" >
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Select file to uplopad</h5>
+          <p class="card-text">1.File must be a Image <br>
+            2.File must be with in 1 mb</p>
+            <input type="file" name="image" (change)="selectImage($event)">
+          <button type="submit" class="btn btn-primary" (click)="fileUpload()">Upload</button>
+        </div>
+      </div>
+</form>

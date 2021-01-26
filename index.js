@@ -1,13 +1,15 @@
 const express = require('express')
 const multer =require('multer')
+const cors = require('cors')
 var app = express()
-app.set(express.static('public'))
+app.use(cors())
+app.use(express.static('public'))
 app.get('/',(req,res)=>{
-    res.send('hello')
+    res.sendFile('index.html')
 })
 storage = multer.diskStorage({
     destination:(req,file,cb)=>{
-        cb(null,'./images')
+        cb(null,'./public/images')
     },
     filename:(req,file,cb)=>{
         cb(null,file.originalname)
@@ -45,4 +47,4 @@ var upload = multer({
     })
   })
 
-app.listen(4000,()=>console.log('port running in 4000'))
+app.listen(8000,()=>console.log('port running in 8000'))
